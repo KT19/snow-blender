@@ -10,7 +10,7 @@ import { useControls } from 'leva';
 
 export default function Scene() {
     const { bgFrom, bgVia, bgTo, autoRotateSpeed } = useControls('Scene', {
-        bgFrom: { value: '#1d315fff', label: 'BG Outer' }, // Deep Blue/Gray
+        bgFrom: { value: '#1d315fff', label: 'BG Outer' }, 
         bgVia: { value: '#68527aff', label: 'BG Mid' },
         bgTo: { value: '#6d4c72da', label: 'BG Center' },
         autoRotateSpeed: { value: 0.5, min: 0, max: 5, step: 0.1 },
@@ -24,7 +24,6 @@ export default function Scene() {
 
 
             <Canvas shadows gl={{ toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.8 }}>
-                {/* Fog to blend scene into darkness - matching the dark background */}
                 <fog attach="fog" args={['#646568', 5, 25]} />
 
                 <PerspectiveCamera makeDefault position={[0, 0, 8]} fov={50} />

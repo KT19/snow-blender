@@ -7,8 +7,6 @@ export function SnowGlobe() {
     const glassRef = useRef<THREE.Mesh>(null);
     const { scene } = useGLTF(houseRoofUrl);
 
-
-
     return (
         <group>
             {/* The Glass Sphere */}
